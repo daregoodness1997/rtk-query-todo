@@ -66,6 +66,11 @@ code {
     padding: 1rem;
     width: 92%;
   }
+  article label {
+    margin-left: 4px;
+    font-size: 10px;
+    width: 200px;
+  }
 }
 
 h1 {
@@ -86,8 +91,8 @@ input[type='text'] {
 }
 
 input[type='checkbox'] {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 button {
@@ -105,8 +110,10 @@ button:hover {
 }
 
 button.trash {
-  width: 40px;
-  color: red;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  color: rgb(255, 95, 95);
   border-radius: 100%;
 }
 
@@ -128,6 +135,7 @@ article .todo {
 article label {
   margin-left: 8px;
   font-size: 12px;
+  width: 240px;
 }
 
 .nav-section {

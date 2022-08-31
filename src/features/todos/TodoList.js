@@ -56,7 +56,7 @@ const TodoList = () => {
   if (isLoading) {
     content = <p>Loading...</p>;
   } else if (isSuccess) {
-    content = todos.todos.map(todo => {
+    content = todos.map(todo => {
       return (
         <article key={todo.id}>
           <div className='todo'>
