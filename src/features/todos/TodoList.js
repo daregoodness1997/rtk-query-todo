@@ -28,7 +28,7 @@ const TodoList = () => {
   const handleSunmit = e => {
     e.preventDefault();
     // addTodo
-    addTodo({ userId: 1, todo: newTodo, complete: false });
+    addTodo({ userId: 1, todo: newTodo, completed: false });
     setNewTodo('');
   };
 
