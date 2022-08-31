@@ -60,11 +60,15 @@ code {
 }
 @media (max-width: 400px) {
   .container {
-    padding-top: 5rem;
+    padding-top: 1rem;
   }
   .todo-container {
     padding: 1rem;
     width: 92%;
+    height: calc(100vh - 2rem);
+  }
+  .todo-content {
+    height: calc(100vh - 2rem);
   }
   article label {
     margin-left: 4px;
