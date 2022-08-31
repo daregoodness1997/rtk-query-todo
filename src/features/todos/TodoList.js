@@ -2,9 +2,19 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
+// import queryHooks
+import { useGetTodosQuery } from '../api/apiSlice';
+
 const TodoList = () => {
   const [newTodo, setNewTodo] = useState('');
 
+  const {
+    data: todos,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+  } = useGetTodosQuery();
   const handleSunmit = e => {
     e.preventDefault();
     // addTodo
@@ -30,6 +40,14 @@ const TodoList = () => {
   );
 
   let content;
+
+  if (isLoading) {
+    content = <p>Loading...</p>;
+  } else if (isSuccess) {
+    content = JSON.stringify(todos);
+  } else if (isError) {
+    content = <p>{error}</p>;
+  }
   return (
     <div className='container'>
       <div className='todo-container'>
